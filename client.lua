@@ -123,12 +123,3 @@ AddEventHandler('onResourceStop', function(resourceName)
         end
     end
 end)
-
-RegisterNetEvent('tropic-boxtruck:interactTruck', function(truck)
-    if Config.RequireItem and not QBCore.Functions.HasItem(Config.RequiredItem) then
-        QBCore.Functions.Notify("You don't have the required item!", "error")
-        return
-    end
-
-    TriggerServerEvent('tropic-boxtruck:giveReward')
-end)
